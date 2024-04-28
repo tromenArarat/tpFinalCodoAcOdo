@@ -1,0 +1,333 @@
+/* Estilos de index.html */
+
+/* Configuración de las variables globales */
+
+:root{
+    /* Configuración de variables de colores */
+    --primary-color:#BFA054;
+    --secondary-color:#858585;
+    /* Colores de fondo */
+    --bg-color:#FBF8F2;
+    --bg-input-color:#F5EFE1;
+    /* Fuente primaria */
+    --primary-font: "DM Serif Display", serif;
+    --secondary-font: "Kantumruy";
+    --primary-black-text: #2F2F2F;
+}
+body, html{
+    font-family: var(--primary-font);
+    /* font-style: var(--primary-black-text); */
+    background: var(--bg-input-color);
+    margin: 0;
+    padding: 0;
+    /* height: 100vh; */
+}
+header {
+    background-color: var(--bg-input-color);
+    padding: 2vh 0;
+    margin: 0;
+}
+/* Crea un contenedor flexible:
+    Al aplicar display: flex a un elemento padre, se convierte
+    en un contenedor flexible que organiza a sus elementos
+    hijos de manera flexible
+    en una sola línea o en varias líneas según sea
+    necesario.
+*/
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+
+nav ul li:nth-child(2) {
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav ul li:nth-child(1):hover,
+nav ul li:nth-child(3):hover {
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+}
+
+nav ul li a,
+nav > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--primary-black-text);
+    transition: var(--bg-input-color) 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+.img-container {
+    width: 80%;
+    align-items: center;
+    height: 80%;
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+
+.full-width {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 20px;
+}
+
+.contenedorData-principal{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+}
+.book-info {
+    margin-left: 20px;
+}
+
+.book-info h3{
+    margin-top: -20px;
+    font-family: var(--secondary-font);
+}
+
+.status {
+    padding: 2px; 
+    margin-right: 20px;
+    font-style: italic;
+    color: var(--secondary-color);
+}
+
+.contenedorData-secundaria {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    
+}
+
+.contenedorData-secundaria > div {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: space-between; 
+}
+
+.contenedorData-secundaria > div > div {
+    border: 1px solid var(--secondary-color); 
+    border-radius: 15px; 
+    border-color: var(--primary-color);
+    padding: 1rem 4rem; 
+    text-align: center;
+}
+
+.contenedorData-secundaria > div > div h4 {
+    margin: 0; 
+    font-family: var(--secondary-font);
+}
+
+.cssero {
+    width: 80%;
+    margin-top: 20px;
+    text-decoration: none;
+    font-family: var(--secondary-font);
+}
+
+
+.cssero ul li a{
+    text-decoration: none;
+    color: var(--primary-black-text);
+    display: inline-block;
+    justify-content: space-between;
+}
+.cssero .textArea{
+    width: 78vw;
+    height: 30vh;
+    text-align: justify;
+}
+.cssero .textArea .lectores{
+    flex-direction: column;
+}
+
+.etiquetas {
+    width: 100%; 
+}
+
+.etiquetas ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondary-color); 
+}
+
+.etiquetas ul li a:hover {
+    border-bottom: 1px solid var(--primary-color); 
+}
+
+/* animaciones del botón */
+.container{
+    width: 80%;
+    display: flex;
+}
+button{
+    justify-content: space-between;
+}
+.btn{
+    width: 100%;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-black-text);
+    border: none;
+    border-radius: 5px;
+    transition: var(--secondary-color) 0.3s;
+}
+.btn:hover{
+    background-color: var(--bg-input-color);
+}
+.btn1{
+    width: 100%;
+    padding:10px 20px;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-black-text);
+    border: none;
+    border-radius: 5px;
+    transition: var(--secondary-color) 0.3s;
+}
+.btn1:hover{
+    background-color: var(--bg-input-color);
+}
+
+/* animaciones */
+@keyframes pulso{
+    /* dividir en porcentajes */
+    /* 0% estado actual */
+    0% {
+        /*  > 1 achica 
+            < 1 agrandar */
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.btn:hover{
+    /*  primer parámetro:nombre de la animación
+                         que queremos que se active,
+        2do parámetro: tiempo que va a durar una 
+                       sola secuencia,
+        3do parámetro: cómo será la repetición,
+        4to parámetro: ?
+    */
+    animation: pulso 0.4s  infinite alternate;
+}
+.btn1:hover{
+    animation: pulso 0.6s  infinite alternate;
+}
+
+/* media queries */
+/* @media only screen and (max-width:600px){
+    .container{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .item{
+        width: 100px;
+        height: 100px;
+        border: none;
+        background-color: coral;
+    }
+} */
+/* @media only screen and (min-width:601px) and (max-width:980px){
+    .container{
+        background-color: beige;
+        align-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .item{
+        width:150px;
+        height: 150px;
+        background-color: chartreuse;
+    }
+
+} */
+
+
+/*
+
+
+Colors -
+
+(Dark Charcoal) #2F2F2F - 
+primary black for text on light background
+
+(Aztec Gold)#BFA054 - used as a primary color
+
+(Old Silver) #858585 - used for the less emphasis text
+
+(Alabaster) #F5EFE1 - used as a background cards
+
+(Floral White) #FBF8F2 - Used as a background color
+
+
+
+Font -
+
+DM Serif Display (Regular) - used for heading to give ancient look
+
+Kantumruy (Regular) - used for body copy
+
+
+
+Asset Link or credits -
+
+Icons are used from the iconsax and all images are used from google.
+
+
+
+Techniques-
+
+1. Glassmorphism
+
+
+
+Our designer says - As ancient design is the core 
+of design, a New Age technology that helps to create a feeling of peace and serenity. I wanted to give the look and feel of ancient design.
+
+/* Audiobooks by Booksbury */
+
+/* position: relative;
+width: 1600px;
+height: 1200px;
+
+background: linear-gradient(180deg, #94826B 0%, #B5A898 100%);
+
+*/
