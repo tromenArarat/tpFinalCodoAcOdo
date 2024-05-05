@@ -46,8 +46,6 @@ header {
 
 /* Estilo del NAV */
 
-
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -101,23 +99,21 @@ nav ul li a:hover {
 /* IMAGEN LIBRO SELECCIONADO */
 .main {
     display: flex;
-    flex-direction: column;
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
 }
+
 .seleccionado {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 20px; /* adjust as needed */
 }
-
 .img-container {
     position: relative;
     width: 60%; /* Set a fixed width */
     margin: 0 auto; /* Center the container */
 }
-
 .img-selec {
     margin: 0;
     padding: 0;
@@ -127,87 +123,62 @@ nav ul li a:hover {
     background-color: var(--secondary-color);
     overflow: hidden;
 }
-
-.detalle-libro {
+.comentarios {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: grid; /* Use grid for layout */
-    grid-template-columns: 1fr auto; /* Two columns, first one takes remaining space, second one is auto */
-    align-items: center; /* Align items vertically in the center */
-    padding: 10px;
+    size: 150%;
+    top: 5px;
+    right: 5px;
+    background-color: var(--bg-color); /* Make the button background transparent */
+    border-radius: 5px;
+    color: var(--primary-color); /* Icon color */
+    outline: none; /* Remove default button outline */
+}
+
+.fa-comments {
+    font-size: 20px; /* Adjust icon size */
+}
+
+
+.zocalo {
+    margin: 0;
+    padding: 0;
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
     border-radius: 0 0 10px 10px;
-    backdrop-filter: blur(1px);
-    background-color: rgba(255, 255, 255, 0.5); /* adjusted background color with transparency */
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
 }
-
-.detalle-libro .titulo-libro {
-    margin: 0;
+.zocalo > .titulo-calado{
+    margin-left: 5px;
     padding: 0;
     grid-column: 1;
+    
 }
-.detalle-libro .autor-libro {
-    margin: 0;
+.zocalo > .descargas {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end;
+    margin-right: 5px;
     padding: 0;
-    grid-column: 1;
-    align-items: center;
+    grid-column: 2; /* First column */
 }
-
-.detalle-libro .estado {
-    margin: 0;
-    padding: 0;
-    font-size: large;
-    grid-column: 2;
+.zocalo > .autor {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: end;
+    margin-top: -40px;
+    margin-right: 5px;
+    padding: 0px;
+    grid-column: 2; /* Second column */
 }
-
-/* GRID DE LIBROS POPULARES */
 
 .main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.seleccionado {
-    margin-top: 20px;
-}
-
-.img-container {
-    position: relative;
-    width: 80%; /* Adjust as needed */
-    margin: 0 auto;
-}
-
-.img-selec {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.zocalo {
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
-    padding: 10px;
-    border-radius: 0 0 10px 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.titulo-calado {
-    margin: 0;
-}
-
-.descargas, .autor {
-    display: flex;
-    align-items: center;
-}
-
-.descargas i, .autor i {
-    margin-right: 5px;
 }
 
 .populares {
@@ -222,7 +193,7 @@ nav ul li a:hover {
 .cards-horizontales {
     display: grid;
     grid-template-columns: 1fr; /* By default, one card per row */
-    gap: 20px;
+    gap: 5px;
 }
 
 @media (min-width: 768px) {
@@ -232,37 +203,43 @@ nav ul li a:hover {
 }
 
 .cardHorizontal {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
+    display: flex; /* Change from grid to flex */
+    background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .cardHorizontal a {
-    display: block;
+    flex: 0 0 20%; /* Set width for the image */
 }
 
 .tapa {
-    width: 100%;
+    width: 100%; /* Adjust image width to fill its container */
     height: auto;
 }
-
-.titulo-libro-card, .autor-libro-card {
-    margin: 10px;
-    color: var(--primary-black-text);
-}
-
-.calificacion {
+.columna-dos{
     display: flex;
-    align-items: center;
-    margin: 0 10px 10px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardHorizontal .titulo-libro-card, .autor-libro-card, .calificacion {
+    flex: 1; /* Take remaining space */
+    padding: 10px; /* Add padding for better spacing */
+    display: block; /* Ensure elements inside the card are block */
+    color: var(--primary-black-text);
+    
+}
+.cardHorizontal .titulo-libro-card{
+    margin-top: -10px;
+}
+.cardHorizontal .autor-libro-card, .calificacion{
+    margin-top: -30px;
 }
 
-.calificacion i {
-    margin-right: 5px;
+.calificacion em {
+    display: block; /* Ensure downloads are on a separate line */
+    margin-top: 5px; /* Add spacing between each line */
 }
-
 
 /* FOOTER */
 
