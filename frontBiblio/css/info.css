@@ -253,6 +253,45 @@ button{
     animation: pulso 0.6s  infinite alternate;
 }
 
+/* FOOTER */
+
+/* Footer fijado */
+.footer {
+    max-width: 1200px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translateX(-50%);
+    /* Centra horizontalmente */
+    box-shadow: 0px 5px 30px var(--primary-color);
+    background-color: var(--bg-color);
+
+    width: 100%;
+    height: 7.5vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer a{
+    border: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+/* Tablets */
+@media screen and (min-width: 600px) {
+}
+/* Escritorio */
+@media screen and (min-width: 900px) {
+    .footer {
+        display: none;
+    }
+}
+
 /* media queries */
 /* @media only screen and (max-width:600px){
     .container{

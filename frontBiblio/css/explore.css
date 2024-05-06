@@ -96,149 +96,72 @@ nav ul li a:hover {
 
 /* Estilos del MAIN */
 
-/* IMAGEN LIBRO SELECCIONADO */
-.main {
-    display: flex;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-}
-
-.seleccionado {
+.categorias {
     display: flex;
     justify-content: center;
+}
+
+.categoria {
+    background-color: transparent;
+    border: 1px solid #ccc; /* Grey outline */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    display: flex;
     align-items: center;
-    margin-top: 20px; /* adjust as needed */
-}
-.img-container {
-    position: relative;
-    width: 60%; /* Set a fixed width */
-    margin: 0 auto; /* Center the container */
-}
-.img-selec {
-    margin: 0;
-    padding: 0;
-    width: 100%; /* Width 100% of its container */
-    height: auto; /* Height auto to maintain aspect ratio */
-    border-radius: 10px;
-    background-color: var(--secondary-color);
+    padding: 2px 55px; /* Adjusted padding */
+    margin: 0 10px;
+    white-space: nowrap;
     overflow: hidden;
-}
-.comentarios {
-    position: absolute;
-    size: 150%;
-    top: 5px;
-    right: 5px;
-    background-color: var(--bg-color); /* Make the button background transparent */
-    border-radius: 5px;
-    color: var(--primary-color); /* Icon color */
-    outline: none; /* Remove default button outline */
+    text-overflow: ellipsis;
 }
 
-.fa-comments {
-    font-size: 20px; /* Adjust icon size */
-}
-
-
-.zocalo {
+.categoria h5 {
     margin: 0;
-    padding: 0;
-    display:grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
-    border-radius: 0 0 10px 10px;
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-}
-.zocalo > .titulo-calado{
-    margin-left: 5px;
-    padding: 0;
-    grid-column: 1;
-    
-}
-.zocalo > .descargas {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: flex-end;
-    margin-right: 5px;
-    padding: 0;
-    grid-column: 2; /* First column */
-}
-.zocalo > .autor {
-    display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: end;
-    margin-top: -40px;
-    margin-right: 5px;
-    padding: 0px;
-    grid-column: 2; /* Second column */
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
+.categoria i {
+    font-size: 24px;
+    margin-right: 5px;
 }
 
-.populares {
-    width: 80%;
+/* CARDS */
+
+.cards {
     margin-top: 20px;
-}
-
-.h2 {
-    color: var(--primary-black-text);
-}
-
-.cards-horizontales {
     display: grid;
-    grid-template-columns: 1fr; /* By default, one card per row */
-    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards with minimum width of 300px */
+    gap: 10px;
+    align-items: center;
+    margin-left: 20px;
 }
 
-@media (min-width: 768px) {
-    .cards-horizontales {
-        grid-template-columns: repeat(2, 1fr); /* Two cards per row for tablets */
-    }
+.cardVer1, .cardVer2 {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    text-align: left;
 }
 
-.cardHorizontal {
-    display: flex; /* Change from grid to flex */
+.cardVer1 a, .cardVer2 a {
     background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
-}
-
-.cardHorizontal a {
-    flex: 0 0 20%; /* Set width for the image */
+    display: block;
+    width: 100%;
+    
 }
 
 .tapa {
-    width: 100%; /* Adjust image width to fill its container */
+    width: 90%; 
     height: auto;
-}
-.columna-dos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.cardHorizontal .titulo-libro-card, .autor-libro-card, .calificacion {
-    flex: 1; /* Take remaining space */
-    padding: 10px; /* Add padding for better spacing */
-    display: block; /* Ensure elements inside the card are block */
-    color: var(--primary-black-text);
-    
-}
-.cardHorizontal .titulo-libro-card{
-    margin-top: -10px;
-}
-.cardHorizontal .autor-libro-card, .calificacion{
-    margin-top: -30px;
+    border-radius: 10px;
+    margin: 5px 0; 
 }
 
-.calificacion em {
-    display: block; /* Ensure downloads are on a separate line */
-    margin-top: 5px; /* Add spacing between each line */
+.cardVer1 .titulo-libro-card, .cardVer1 .autor-libro-card, .cardVer1 .calificacion,
+.cardVer2 .titulo-libro-card, .cardVer2 .autor-libro-card, .cardVer2 .calificacion {
+    padding: 15px; 
+    margin: 0;
 }
 
 /* FOOTER */
