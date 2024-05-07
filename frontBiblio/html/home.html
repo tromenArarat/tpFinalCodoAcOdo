@@ -29,7 +29,19 @@
 </head>
 
 <body>
-    <!-- Nav o encabezado -->
+<!-- HEADER -->
+<div class="header__logo">
+    <select data-categorias>
+        <option value="todos">Categorias</option>
+        <option value="comedia">Comedia</option>
+        <option value="acción">Acción</option>
+        <option value="crimen">Crimen</option>
+        <option value="drama">Drama</option>
+        <option value="aventura">Aventura</option>
+    </select>
+</div>
+
+    <!-- NAV -->
     <!-- Tiene 3 partes -->
     
     <nav class="nav">
@@ -153,8 +165,18 @@
                     </div>
                 </div>
             </div>
-            
         </div>
+        <!-- LIBROS DE LA DB -->
+        <section data-name="biblioteca" class="section">
+            <h2>
+                Biblioteca personal
+            </h2>
+        </section>
+
+        <section data-name="categoria" class="hidden pesquisa">
+            <h2>Títulos en tu estantería</h2>
+        </section>
+
     </main>
     
     <!-- FOOTER PARA CELUS Y TABLETS -->
@@ -166,6 +188,9 @@
             <a href="Views/login.html"><i class="fa-solid fa-circle-user"></i></a>
         </div>
     </footer>
+
+    <!-- SCRIPT -->
+    <script src="../js/home.js"></script>
 
 </body>
 
