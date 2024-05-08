@@ -15,6 +15,7 @@ public class Libro {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "autor_id")
     private Autor autor;
+    private String categoria;
     private String idioma;
     private Double descargas;
     @OneToOne(fetch = FetchType.EAGER)
@@ -22,10 +23,11 @@ public class Libro {
     private Formato formato;
     public Libro() {
     }
-    public Libro(String titulo, Autor autor, List<String> idiomas, Double descargas, Formato formato) {
+    public Libro(String titulo, Autor autor, List<String> categorias, List<String> idiomas, Double descargas, Formato formato) {
         this.titulo = titulo;
         this.autor = autor;
-        this.idioma = idiomas != null && !idiomas.isEmpty() ? String.join(",", idiomas) : null;
+        this.categoria = categorias != null && !categorias.isEmpty() ? categorias.get(0) : null;
+        this.idioma = idiomas != null && !idiomas.isEmpty() ? idiomas.get(0) : null;
         this.descargas = OptionalDouble.of(descargas).orElse(0);
         this.formato = formato;
     }
@@ -60,6 +62,14 @@ public class Libro {
         this.descargas = descargas;
     }
 
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
     public Formato getFormato() {
         return formato;
     }
@@ -74,6 +84,7 @@ public class Libro {
                 "Título: " + titulo + "\n" +
                 "Autor: " + autor.getNombre() + "\n" +
                 "Idioma: " + idioma + "\n" +
+                "Categoría: " + categoria + "\n" +
                 "Número de descargas: " + descargas + "\n" +
                 "Imagen de tapa: " + formato.getTapa() + "\n" +
                 "-------------------";

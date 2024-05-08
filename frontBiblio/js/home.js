@@ -20,7 +20,7 @@ function crearListaLibros(elemento, datos) {
     ul.className = 'lista';
     const listaHTML = datos.map((libro) => `
         <li>
-            <a href="/detalles.html?id=${libro.id}">
+            <a href="/info.html?id=${libro.id}">
                 <img src="${libro.tapa}" alt="${libro.titulo}">
             </a>
         </li>
@@ -39,7 +39,7 @@ const categoriaSelect = document.querySelector('[data-categorias]');
 const sectionsParaOcultar = document.querySelectorAll('.section'); // Adicione a classe CSS 'hide-when-filtered' às seções e títulos que deseja ocultar.
 
 categoriaSelect.addEventListener('change', function () {
-    const categoria = document.querySelector('[data-name="categoria"]');
+    const categoria = document.querySelector('[data-name="biblioteca"]');
     const categoriaSeleccionada = categoriaSelect.value;
 
     if (categoriaSeleccionada === 'todos') {
@@ -57,7 +57,7 @@ categoriaSelect.addEventListener('change', function () {
 
         categoria.classList.remove('hidden')
         // Haga una solicitud para el endpoint com la categoria seleccionada
-        getdatos(`/libreria/categoria/${categoriaSeleccionada}`)
+        getdatos(`/libros/categoria/${categoriaSeleccionada}`)
             .then(data => {
                 crearListaLibros(categoria, data);
             })
@@ -69,7 +69,7 @@ categoriaSelect.addEventListener('change', function () {
 
 generaLibros();
 function generaLibros() {
-    const urls = ['/libreria/home'];
+    const urls = ['/libros/home'];
 
     // Hace todas las solicitudes en paralelo
     Promise.all(urls.map(url => getdatos(url)))

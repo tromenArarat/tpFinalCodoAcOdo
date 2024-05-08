@@ -4,6 +4,7 @@ import com.alura.libreria.dto.LibroDTO;
 import com.alura.libreria.service.LibroServicio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,4 +20,10 @@ public class LibroController {
     public List<LibroDTO> obtenerTodosLosLibros(){
         return servicio.obtenerTodosLosLibros();
     }
+
+    @GetMapping("/categoria/{nombreCategoria}")
+    public List<LibroDTO> obtenerLibrosPorCategoria(@PathVariable String nombreCategoria){
+        return servicio.obtenerLibrosPorCategoria(nombreCategoria);
+    }
+
 }

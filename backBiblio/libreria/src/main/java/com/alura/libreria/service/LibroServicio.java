@@ -24,10 +24,23 @@ public class LibroServicio {
                         l.getId(),
                         l.getTitulo(),
                         l.getAutor(),
+                        l.getCategoria(),
                         l.getIdioma(),
                         l.getDescargas(),
                         l.getFormato()
                 ))
                 .collect(Collectors.toList());
     }
+
+    public List<LibroDTO> obtenerLibrosPorCategoria(String nombreCategoria) {
+        String categoria = nombreCategoria;
+        return convierteDatos(repository.findByCategoria(categoria));
+    }
 }
+
+/*
+public List<SerieDTO> obtenerSeriesPorCategoria(String nombreGenero) {
+        Categoria categoria = Categoria.fromEspanol(nombreGenero);
+        return convierteDatos(repository.findByGenero(categoria));
+    }
+ */

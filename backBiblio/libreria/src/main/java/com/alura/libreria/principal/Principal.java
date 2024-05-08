@@ -35,11 +35,13 @@ public class Principal {
                     3- listar autorxs registrados
                     4- listar autorxs vivos en un determinado año
                     5- listar libros por idioma
-                    -- - - - EXTRAS - - - - 
+                    - - - - - EXTRAS - - - - 
                     6- buscar autorxs por nombre
                     7- top 10 libros en la API
                     8- top 5 libros en la DB
-                    9- autores en derecho público                                  
+                    9- autores en derecho público
+                    - - - EXTRAS - - EXTRAS - - 
+                    10 - listar libros por categorías                                  
                     0 - Salir
                     """;
             System.out.println(menu);
@@ -72,6 +74,9 @@ public class Principal {
                     break;
                 case 9:
                     autoresEnDerechoPublico();
+                    break;
+                case 10:
+                    listarLibrosPorCategoria();
                     break;
                 case 0:
                     System.out.println("Cerrando la aplicación...");
@@ -174,7 +179,8 @@ private String pregunta() {
                             Libro libro = new Libro(
                                     datosLibro.titulo(),
                                     autor,
-                                    datosLibro.idioma() != null ? datosLibro.idioma() : Collections.emptyList(),
+                                    datosLibro.categoria() != null ? datosLibro.categoria():null,
+                                    datosLibro.idioma() != null ? datosLibro.idioma():null,
                                     datosLibro.descargas(),
                                     formato
                             );
@@ -246,6 +252,32 @@ private String pregunta() {
 
     }
 
+    public void listarLibrosPorCategoria(){
+        libros = repositorio.findAll();
+        List<Libro> librosConCategoria = libros.stream()
+                .filter(libro -> libro.getCategoria() != null)
+                .collect(Collectors.toList());
+
+        List<String> categoriasUnicas = librosConCategoria.stream()
+                .map(Libro::getCategoria)
+                .distinct()
+                .collect(Collectors.toList());
+
+        categoriasUnicas.forEach(categoria -> {
+            System.out.println(categoria);
+        });
+
+        System.out.println("");
+        System.out.println("Ingrese la categoría de la que desea buscar los libros");
+        String categoriaBuscada = teclado.nextLine();
+
+        List<Libro> librosPorCategoria = librosConCategoria.stream()
+                .filter(l -> l.getCategoria().contains(categoriaBuscada))
+                .collect(Collectors.toList());
+
+        librosPorCategoria.forEach(System.out::println);
+    }
+
     /*
     EXTRAS:
     - Top 10 libros más descargados en la base de datos y en la API
@@ -286,6 +318,7 @@ private String pregunta() {
                 Libro libro = new Libro(
                         datosLibros.get(i).titulo(),
                         autor,
+                        datosLibros.get(i).categoria(),
                         datosLibros.get(i).idioma(),
                         datosLibros.get(i).descargas(),
                         formato);

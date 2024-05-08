@@ -7,6 +7,7 @@ public record LibroDTO(
         Long Id,
         String titulo,
         Autor autor,
+        String categoria,
         String idioma,
         Double descargas,
         Formato formato
