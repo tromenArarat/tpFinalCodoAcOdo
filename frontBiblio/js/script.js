@@ -11,5 +11,5 @@ function mostrarSeccion(nombreSeccion) {
 }
 
 window.addEventListener('load', function() {
-    mostrarSeccion('reseña');
+    mostrarSeccion('');
 });

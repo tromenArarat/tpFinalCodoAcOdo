@@ -8,5 +8,6 @@ public class LibreriaApplicationWeb {
     public static void main(String[] args) {
 
         SpringApplication.run(LibreriaApplicationWeb.class, args);
+        System.out.println("Gracias por el dato");
     }
 }
