@@ -1,47 +1,6 @@
 /* Estilos de home.html */
 
-/* Configuración de las variables globales */
-:root{
-    --primary-color:#BFA054;
-    --secondary-color:#858585;
-    --bg-color:#FBF8F2;
-    --bg-input-color:#F5EFE1;
-    --primary-font: "DM Serif Display", serif;
-    --secondary-font: "Kantumruy";
-    --primary-black-text: #2F2F2F;
-}
-body, html{
-    font-family: var(--primary-font);
-    background: var(--bg-input-color);
-    margin: 0;
-    padding: 0;
-}
-
-:root{
-    /* Configuración de variables de colores */
-    --primary-color:#BFA054;
-    --secondary-color:#858585;
-    /* Colores de fondo */
-    --bg-color:#FBF8F2;
-    --bg-input-color:#F5EFE1;
-    /* Fuente primaria */
-    --primary-font: "DM Serif Display", serif;
-    --secondary-font: "Kantumruy";
-    --primary-black-text: #2F2F2F;
-}
-body, html{
-    font-family: var(--primary-font);
-    /* font-style: var(--primary-black-text); */
-    background: var(--bg-input-color);
-    margin: 0;
-    padding: 0;
-    /* height: 100vh; */
-}
-header {
-    background-color: var(--bg-input-color);
-    padding: 2vh 0;
-    margin: 0;
-}
+@import url("./variables.css");
 
 
 /* Estilo del NAV */
