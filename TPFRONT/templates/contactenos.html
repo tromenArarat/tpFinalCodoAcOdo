@@ -51,9 +51,9 @@
     <main>
         <div class="contenedor-forms form-contacto">
             <h2>Contáctanos</h2>
-            <form class="form-login-register form-contacto" action="#">
+            <form class="form-login-register form-contacto" name="informacion" method="post" action="#">
                 <label for="nombre">Nombre </label>
-                <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                <input type="text" id="nombre" pattern="[A-Za-z]{3,}" placeholder="Ingrese su nombre" required>
                 <label for="email">Email </label>
                 <input type="email" id="email" placeholder="Ingrese su email" required>
                 <label for="mensaje">Mensaje </label>
@@ -77,12 +77,13 @@
                 <p> <input type="checkbox" name="" id="" required> ¿Desea recibir notificaciones?</p>
                 <br>
                 <div class="container">
-                    <button type="submit" class="btn">ENVIAR</button>
+                    <button type="button" id="enviar" class="btn">ENVIAR</button>
                 </div>
             </form>
         </div>
     </main>
     </div>
+    <script src="../static/scripts/validacion.js"></script>
 </body>
 
 </html>
