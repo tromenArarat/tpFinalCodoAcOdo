@@ -39,10 +39,10 @@ nav ul li a:hover {
 }
 .nav ul li .centro {
     display: flex;
-    align-items: center; /* Center vertically */
+    align-items: center; /* Centramos Verticalmente */
 }
 .nav ul li .centro i {
-    margin-right: 10px; /* Add some space between icon and text */
+    margin-right: 10px; /* Añadimos espacio entre los iconos y el texto */
 }
 
 .menu-desplegable li a {
@@ -68,8 +68,8 @@ nav ul li a:hover {
 /* IMAGEN LIBRO SELECCIONADO */
 .main {
     display: flex;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    align-items: center; 
+    justify-content: center; 
 }
 
 .seleccionado {
@@ -80,14 +80,14 @@ nav ul li a:hover {
 }
 .img-container {
     position: relative;
-    width: 60%; /* Set a fixed width */
-    margin: 0 auto; /* Center the container */
+    width: 60%; /*le damos un tamaño fijo y lo centramos*/
+    margin: 0 auto; 
 }
 .img-selec {
     margin: 0;
     padding: 0;
-    width: 100%; /* Width 100% of its container */
-    height: auto; /* Height auto to maintain aspect ratio */
+    width: 100%; /* hacemos que la imagen se adapte al ancho del container */
+    height: auto; /* dejamos la altura en automático para que se mantenga relación de aspecto*/
     border-radius: 10px;
     background-color: var(--secondary-color);
     overflow: hidden;
@@ -97,14 +97,14 @@ nav ul li a:hover {
     size: 150%;
     top: 5px;
     right: 5px;
-    background-color: var(--bg-color); /* Make the button background transparent */
+    background-color: var(--bg-color); /* transparencia para el fondo del botón */
     border-radius: 5px;
-    color: var(--primary-color); /* Icon color */
-    outline: none; /* Remove default button outline */
+    color: var(--primary-color); /* color del ícono */
+    outline: none; 
 }
 
 .fa-comments {
-    font-size: 20px; /* Adjust icon size */
+    font-size: 20px; /* Acá ajustamos el tamaño del ícono */
 }
 
 
@@ -114,7 +114,7 @@ nav ul li a:hover {
     display:grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 0 0 10px 10px;
     position: absolute;
     bottom: 5px;
@@ -132,20 +132,20 @@ nav ul li a:hover {
 }
 .zocalo > .descargas {
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: center;
     justify-content: flex-end;
     margin-right: 5px;
     padding: 0;
-    grid-column: 2; /* First column */
+    grid-column: 2; /* Primera columnna */
 }
 .zocalo > .autor {
     display: flex;
-    align-items: center; /* Align items vertically */
+    align-items: center;
     justify-content: end;
     margin-top: -40px;
     margin-right: 5px;
     padding: 0px;
-    grid-column: 2; /* Second column */
+    grid-column: 2; /* Segunda columnna */
 }
 
 .main {
@@ -164,25 +164,25 @@ nav ul li a:hover {
 
 .cards-horizontales {
     display: grid;
-    grid-template-columns: 1fr; /* By default, one card per row */
+    grid-template-columns: 1fr; /* Por defecto una card por fila */
     gap: 5px;
 }
 
 
 
 .cardHorizontal {
-    display: flex; /* Change from grid to flex */
+    display: flex; 
     background-color: var(--bg-color);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .cardHorizontal a {
-    flex: 0 0 20%; /* Set width for the image */
+    flex: 0 0 20%; /* Seteamos width de la imagen */
 }
 
 .tapa {
-    width: 100%; /* Adjust image width to fill its container */
+    width: 100%; 
     height: auto;
 }
 .columna-dos{
@@ -191,9 +191,9 @@ nav ul li a:hover {
     justify-content: space-between;
 }
 .cardHorizontal .titulo-libro-card, .autor-libro-card, .calificacion {
-    flex: 1; /* Take remaining space */
-    padding: 10px; /* Add padding for better spacing */
-    display: block; /* Ensure elements inside the card are block */
+    flex: 1; 
+    padding: 10px; /* Añadimos padding para dejar más espacio entre cartas */
+    display: block; 
     color: var(--primary-black-text);
     
 }
@@ -205,8 +205,8 @@ nav ul li a:hover {
 }
 
 .calificacion em {
-    display: block; /* Ensure downloads are on a separate line */
-    margin-top: 5px; /* Add spacing between each line */
+    display: block; 
+    margin-top: 5px; 
 }
 
 /* NAV INFERIOR */
@@ -246,7 +246,7 @@ nav ul li a:hover {
 
 @media (min-width: 768px) {
     .cards-horizontales {
-        grid-template-columns: repeat(2, 1fr); /* Two cards per row for tablets */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
