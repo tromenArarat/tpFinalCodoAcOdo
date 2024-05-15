@@ -1,10 +1,7 @@
 /* Estilos de index.html */
-
 @import url("./variables.css");
 
-
 /* Estilos del NAV */
-
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -19,7 +16,6 @@ nav ul li:nth-child(2) {
     font-size: larger;
     font-weight: bold;
 }
-
 nav ul li:nth-child(3):hover {
     background-color: var(--bg-input-color);
     border-radius: 5px;
@@ -32,28 +28,22 @@ nav > a {
     color: var(--primary-black-text);
     transition: var(--bg-input-color) 0.3s;
 }
-
 nav ul li a:hover {
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-
 .nav ul li ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .nav ul li .centro {
     display: flex;
     align-items: center; /* Center vertically */
 }
-
 .nav ul li .centro i {
     margin-right: 10px; /* Add some space between icon and text */
 }
-
-
 
 .menu-desplegable li a {
     background-color: var(--color-fondo);
@@ -260,13 +250,13 @@ nav ul li a:hover {
     }
 }
 
-/* Tablets */
+/* Celulares hasta 600px */
 @media screen and (max-width: 600px) {
     .contacto{
         display: none;
     }
 }
-/* Escritorio */
+/* Laptops/Desktop desde 992px*/
 @media screen and (min-width: 600px) {
     .nav-inf {
         display: none;
