@@ -1,0 +1,230 @@
+/* Estilos de home.html */
+
+@import url("./variables.css");
+
+/* Buscador */
+.buscador {
+    display: flex;
+    justify-content: center;
+}
+
+.search-container {
+    position: relative;
+}
+
+.input-search {
+    background-color: var(--bg-input-color);
+    border: 2px solid var(--primary-black-text);
+    border-radius: 25px;
+    color: var(--primary-black-text);
+    font-size: 16px;
+    height: 50px;
+    margin: 20px 0px;
+    outline: none;
+    padding: 0px 20px 0px 50px; 
+    width: 70%;
+    font-family: var(--font-Kontumruy);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: var(--primary-black-text);
+    text-decoration: none;
+}
+
+/* Estilo del NAV */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+nav ul li:nth-child(2) {
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav ul li:nth-child(3):hover {
+    background-color: var(--bg-input-color);
+    border-radius: 5px;
+}
+nav ul li a,
+nav > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--primary-black-text);
+    transition: var(--bg-input-color) 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.nav ul li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li .centro {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.nav ul li .centro i {
+    margin-right: 10px; /* Add some space between icon and text */
+}
+
+/* Estilos del MAIN */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+}
+
+.categoria {
+    background-color: transparent;
+    border: 1px solid #ccc; /* Grey outline */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px 55px; /* Adjusted padding */
+    margin: 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.categoria h5 {
+    margin: 0;
+}
+
+.categoria i {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* CARDS */
+
+.cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards with minimum width of 300px */
+    gap: 10px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.cardVer1, .cardVer2 {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    text-align: left;
+}
+
+.cardVer1 a, .cardVer2 a {
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tapa {
+    width: 90%; 
+    height: auto;
+    border-radius: 10px; 
+    margin: 5px 0;
+}
+
+.cardVer1 .titulo-libro-card, .cardVer1 .autor-libro-card, .cardVer1 .calificacion,
+.cardVer2 .titulo-libro-card, .cardVer2 .autor-libro-card, .cardVer2 .calificacion {
+    padding: 15px; 
+    margin: 0;
+}
+
+/* NAV INFERIOR */
+
+.nav-inf {
+    max-width: 1200px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translateX(-50%);
+    /* Centra horizontalmente */
+    box-shadow: 0px 5px 30px var(--primary-color);
+    background-color: var(--bg-color);
+
+    width: 100%;
+    height: 7.5vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-inf a{
+    border: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+
+.menu-desplegable li a {
+    background-color: var(--color-fondo);
+    font-family: var(--font-Kontumruy);
+    display: block;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    color: black;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2rem;
+}
+
+.menu-desplegable li:hover a {
+    background-color: var(--color-botones-detalles);
+}
+
+.nav-inf{
+    text-align: center;
+}
+
+/* Footer */
+.footer{
+    text-align: center;
+}
+
+/* MEDIAS QUERIES */
+
+@media (min-width: 768px) {
+    .cards-horizontales {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row for tablets */
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 600px) {
+    .contacto{
+        display: none;
+    }
+}
+/* Escritorio */
+@media screen and (min-width: 600px) {
+    .nav-inf {
+        display: none;
+    }
+}

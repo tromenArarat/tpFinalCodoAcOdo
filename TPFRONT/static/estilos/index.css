@@ -1,0 +1,274 @@
+/* Estilos de index.html */
+
+@import url("./variables.css");
+
+
+/* Estilos del NAV */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 5%;
+    padding: 0;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+nav ul li:nth-child(2) {
+    font-size: larger;
+    font-weight: bold;
+}
+
+nav ul li:nth-child(3):hover {
+    background-color: var(--bg-input-color);
+    border-radius: 5px;
+}
+nav ul li a,
+nav > a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--primary-black-text);
+    transition: var(--bg-input-color) 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.nav ul li ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav ul li .centro {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+.nav ul li .centro i {
+    margin-right: 10px; /* Add some space between icon and text */
+}
+
+
+
+.menu-desplegable li a {
+    background-color: var(--color-fondo);
+    font-family: var(--font-Kontumruy);
+    display: block;
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    color: black;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2rem;
+}
+
+.menu-desplegable li:hover a {
+    background-color: var(--color-botones-detalles);
+}
+
+
+
+/* Estilos del MAIN */
+
+/* IMAGEN LIBRO SELECCIONADO */
+.main {
+    display: flex;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.seleccionado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* adjust as needed */
+}
+.img-container {
+    position: relative;
+    width: 60%; /* Set a fixed width */
+    margin: 0 auto; /* Center the container */
+}
+.img-selec {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Width 100% of its container */
+    height: auto; /* Height auto to maintain aspect ratio */
+    border-radius: 10px;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+}
+.comentarios {
+    position: absolute;
+    size: 150%;
+    top: 5px;
+    right: 5px;
+    background-color: var(--bg-color); /* Make the button background transparent */
+    border-radius: 5px;
+    color: var(--primary-color); /* Icon color */
+    outline: none; /* Remove default button outline */
+}
+
+.fa-comments {
+    font-size: 20px; /* Adjust icon size */
+}
+
+
+.zocalo {
+    margin: 0;
+    padding: 0;
+    display:grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust transparency */
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+}
+.zocalo > .titulo-calado{
+    margin-left: 5px;
+    padding: 0;
+    grid-column: 1;
+    color: white; /* Color del texto */
+    mix-blend-mode:luminosity; /* Modo de mezcla para hacer el texto calado */
+    -webkit-text-stroke-width: 0.1px; /* Ancho del contorno */
+    -webkit-text-stroke-color: black; /* Color del contorno */
+}
+.zocalo > .descargas {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-end;
+    margin-right: 5px;
+    padding: 0;
+    grid-column: 2; /* First column */
+}
+.zocalo > .autor {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: end;
+    margin-top: -40px;
+    margin-right: 5px;
+    padding: 0px;
+    grid-column: 2; /* Second column */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.populares {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.h2 {
+    color: var(--primary-black-text);
+}
+
+.cards-horizontales {
+    display: grid;
+    grid-template-columns: 1fr; /* By default, one card per row */
+    gap: 5px;
+}
+
+
+
+.cardHorizontal {
+    display: flex; /* Change from grid to flex */
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cardHorizontal a {
+    flex: 0 0 20%; /* Set width for the image */
+}
+
+.tapa {
+    width: 100%; /* Adjust image width to fill its container */
+    height: auto;
+}
+.columna-dos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardHorizontal .titulo-libro-card, .autor-libro-card, .calificacion {
+    flex: 1; /* Take remaining space */
+    padding: 10px; /* Add padding for better spacing */
+    display: block; /* Ensure elements inside the card are block */
+    color: var(--primary-black-text);
+    
+}
+.cardHorizontal .titulo-libro-card{
+    margin-top: -10px;
+}
+.cardHorizontal .autor-libro-card, .calificacion{
+    margin-top: -30px;
+}
+
+.calificacion em {
+    display: block; /* Ensure downloads are on a separate line */
+    margin-top: 5px; /* Add spacing between each line */
+}
+
+/* NAV INFERIOR */
+
+.nav-inf {
+    max-width: 1200px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    /* Centra horizontalmente */
+    transform: translateX(-50%);
+    /* Centra horizontalmente */
+    box-shadow: 0px 5px 30px var(--primary-color);
+    background-color: var(--bg-color);
+
+    width: 100%;
+    height: 7.5vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-inf a{
+    border: none;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer{
+    text-align: center;
+}
+
+/* MEDIAS QUERIES */
+
+@media (min-width: 768px) {
+    .cards-horizontales {
+        grid-template-columns: repeat(2, 1fr); /* Two cards per row for tablets */
+    }
+}
+
+/* Tablets */
+@media screen and (max-width: 600px) {
+    .contacto{
+        display: none;
+    }
+}
+/* Escritorio */
+@media screen and (min-width: 600px) {
+    .nav-inf {
+        display: none;
+    }
+}

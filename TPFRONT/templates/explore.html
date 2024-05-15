@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- vinculación con estilos y favicon -->
+    <link rel="stylesheet" href="../static/estilos/explore.css">
+    <link rel="shortcut icon" href="./static/img/icons8-book-96.png" type="image/x-icon">
+
+    <title>LibreriaDeLibros</title>
+
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+
+    <!-- Fuentes (tipografías) de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital@1&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- NAV SUPERIOR-->
+    <!-- Tiene 2 partes -->
+    <nav class="nav">
+        <ul>
+            <!-- Esquina izquierda -->
+            <li>
+                <div class="centro">
+                    <i class="fa-solid fa-book"></i>
+                    <h2>Librería de libros</h2>
+                </div>
+            </li>
+
+            <!-- Esquina derecha -->
+            <!-- Se divide en dos -->
+            <li>
+                <ul>
+                    <!-- Regreso -->
+                    <li>
+                        <a href="../index.html">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </a>
+                    </li>
+                    <!-- Notificaciones -->
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-bell"></i>
+                        </a>
+                    </li>
+                    <!-- Contacto y login -->
+                    <li class="contacto">
+                        <a class="fa-solid fa-circle-user" onclick="desplegarMenu()"></a>
+                        <ul class="menu-desplegable" id="menu-usuario" onmouseleave="ocultarMenu()">
+                            <li> <a href="./templates/login.html">Iniciar sesion</a> </li>
+                            <li> <a href="./templates/contactenos.html">Contáctenos</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="main">
+
+        <!-- BUSCADOR -->
+        <div class="buscador">
+            <div class="search-container">
+                <input type="text" class="input-search" name="title" id="title">
+                <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+
+       <!-- BOTONERA CATEGORÍAS -->
+       <div class="categorias">
+        <button class="categoria categoria1">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <h4 class="tendencia">Tendencia</h4>
+        </button>
+        <button class="categoria categoria2">
+            <i class="fa-regular fa-heart"></i>
+            <h4 class="romantic">Romántico</h4>
+        </button>
+        <button class="categoria categoria3">
+            <i class="fa-solid fa-signs-post"></i>
+            <h4 class="viajes">Viajes</h4>
+        </button>
+       </div>
+        <!-- CARDS LIBROS  -->
+        <div class="cards">
+            <div class="cardVer1">
+                <a href="#">
+                    <img src="../static/img/tapaLugones.webp" alt="tapa" class="tapa">
+                </a>
+                <div class="fila-dos">
+                    <h4 class="titulo-libro-card">Las fuerzas extrañas</h4>
+                    <h5 class="autor-libro-card">Por Leopoldo Lugones</h5>
+                    <div class="calificacion">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <em> 20k descargas</em>
+                    </div>
+                </div>
+            </div>
+            <div class="cardVer2">
+                <a href="#">
+                    <img src="../static/img/tapaLugones.webp" alt="tapa" class="tapa">
+                </a>
+                <div class="fila-dos">
+                    <h4 class="titulo-libro-card">Las fuerzas extrañas</h4>
+                    <h5 class="autor-libro-card">Por Leopoldo Lugones</h5>
+                    <div class="calificacion">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <em> 20k descargas</em>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+    
+    <!-- NAV INFERIOR PARA CELUS Y TABLETS -->
+    <nav>
+        <div class="nav-inf">
+            <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+            <a href="../templates/contactenos.html"><i class="fa-solid fa-circle-info"></i></a>
+            <a href=""><i class="fa-regular fa-bookmark"></i></a>
+            <a href="../templates/login.html"><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+    </nav>
+
+    <!-- FOOTER SOLO PARA PC -->
+    <footer class="footer">
+        <p>&copy; 2024 nombre de la empresa</p>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="../static/scripts/menu.js"></script>
+</body>
+
+</html>

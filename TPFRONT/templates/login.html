@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- vinculación con estilos y favicon -->
+    <link rel="stylesheet" href="../static/estilos/login.css">
+    <link rel="stylesheet" href="../static/estilos/index.css">
+    <link rel="shortcut icon" href="./static/img/icons8-book-96.png" type="image/x-icon">
+
+    <title>LibreriaDeLibros</title>
+
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+
+    <!-- Fuentes (tipografías) de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital@1&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- NAV SUPERIOR-->
+    <nav class="nav">
+        <ul>
+            <!-- Esquina izquierda -->
+            <li>
+                <div class="centro">
+                    <i class="fa-solid fa-book"></i>
+                    <h2>Librería de libros</h2>
+                </div>
+            </li>
+            <!-- Esquina derecha -->
+            <li>
+                <a href="javascript:void(0)" onclick="history.back()">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contenedor-forms">
+            <form class="form-login-register" action="#">
+                <label for="email">Email </label>
+                <input type="email" id="email" placeholder="Ingrese su email" required>
+                <label for="password">Contraseña </label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+                <a href="#">¿Has olvidado tu contraseña?</a>
+                <div class="container">
+                    <button type="submit" class="btn">INICIAR SESIÓN</button>
+                </div>
+            </form>
+            <p>¿Aún no estas registrado? Registrate <a href="">aquí</a></p>
+        </div>
+    </main>
+</body>
+
+</html>

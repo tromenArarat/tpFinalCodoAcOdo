@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+
+    <!-- vinculación con estilos y favicon -->
+    <link rel="stylesheet" href="../static/estilos/contactenos.css">
+    <link rel="stylesheet" href="../static/estilos/index.css">
+    <link rel="shortcut icon" href="./static/img/icons8-book-96.png" type="image/x-icon">
+
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+
+    <!-- Fuentes (tipografías) de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital@1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAV SUPERIOR-->
+    <!-- Tiene 2 partes -->
+    <nav class="nav">
+        <ul>
+            <!-- Esquina izquierda -->
+            <li>
+                <div class="centro">
+                    <i class="fa-solid fa-book"></i>
+                    <h2>Librería de libros</h2>
+                </div>
+            </li>
+
+            <!-- Esquina derecha -->
+            <li>
+                <ul>
+                    <!-- Regreso -->
+                    <li>
+                        <a href="javascript:void(0)" onclick="history.back()">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- MAIN -->
+    <main>
+        <div class="contenedor-forms form-contacto">
+            <h2>Contáctanos</h2>
+            <form class="form-login-register form-contacto" action="#">
+                <label for="nombre">Nombre </label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                <label for="email">Email </label>
+                <input type="email" id="email" placeholder="Ingrese su email" required>
+                <label for="mensaje">Mensaje </label>
+                <div class="contenedor-textarea-img-contacto">
+                    <textarea name="mensaje" id="mensaje"></textarea><img src="../static/img/carta.png"
+                        alt="imagen de carta">
+                </div>
+                <br>
+                <!-- Select -->
+                <select name="pais" id="pais" required>
+                    <option disabled selected>Selecciona tu pais</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Otro">Otro</option>
+                </select>
+                <!-- Input checkbox -->
+                <p> <input type="checkbox" name="" id="" required> ¿Desea recibir notificaciones?</p>
+                <br>
+                <div class="container">
+                    <button type="submit" class="btn">ENVIAR</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    </div>
+</body>
+
+</html>
