@@ -6,7 +6,7 @@
 .contenedor-forms,
 .main {
     max-width: 1200px;
-    min-height: 45vh;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
