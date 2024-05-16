@@ -1,5 +1,11 @@
 # Trabajo Práctico Etapa Front End Codo a Codo
 
+<em> Deploy en: https://tromenararat.github.io/tpFinalCodoAcOdo/ </em>
+
+![image](https://github.com/tromenArarat/tpFinalCodoAcOdo/assets/3432106/5ce4c627-4d4d-42e4-bf93-c3ec4587c55f)
+
+
+![image](https://github.com/tromenArarat/tpFinalCodoAcOdo/assets/3432106/9e6bf9c2-0f02-4bb9-87a1-fa5f1eb4d831)
 
 ## Autores
 
