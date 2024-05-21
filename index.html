@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Vinculación con estilos y favicon -->
-    <link rel="stylesheet" href="../tpFinalCodoAcOdo/static/estilos/index.css">
+    <link rel="stylesheet" href="./static/estilos/index.css">
     <link rel="shortcut icon" href="../tpFinalCodoAcOdo/static/img/icons8-book-96.png" type="image/x-icon">
-
     <title>LibreriaDeLibros</title>
-
     <!-- Fontawesome Icons -->
     <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
-
     <!-- Fuentes (tipografías) de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital@1&display=swap"
         rel="stylesheet">
-
 </head>
-
 <body>
     <!-- NAV SUPERIOR-->
     <!-- Tiene 2 partes -->
@@ -35,7 +28,6 @@
                     <h2>Librería de libros</h2>
                 </div>
             </li>
-
             <!-- Esquina derecha -->
             <!-- Se divide en dos -->
             <li>
@@ -48,7 +40,7 @@
                     </li>
                     <!-- Búsqueda -->
                     <li>
-                        <a href="../tpFinalCodoAcOdo/templates/explore.html">
+                        <a href="./templates/explore.html">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </a>
                     </li>
@@ -56,27 +48,22 @@
                     <li class="contacto">
                         <a class="fa-solid fa-bars" onclick="desplegarMenu()"></a>
                         <ul class="menu-desplegable" id="menu-usuario" onmouseleave="ocultarMenu()">
-                            <li> <a href="../tpFinalCodoAcOdo/templates/login.html">Iniciar sesion</a> </li>
-                            <li> <a href="../tpFinalCodoAcOdo/templates/contactenos.html">Contáctenos</a> </li>
+                            <li> <a href="./templates/login.html">Iniciar sesion</a> </li>
+                            <li> <a href="./templates/contactenos.html">Contáctenos</a> </li>
                         </ul>
                     </li>
                 </ul>
             </li>
         </ul>
     </nav>
-
     <!-- Contenido principal -->
     <main class="main">
-
         <!-- LIBRO SELECCIONADO -->
         <div class="seleccionado">
-
             <div class="img-container">
-
                 <a href="#">
-                    <img class="img-selec" src="../tpFinalCodoAcOdo/static/img/Ile_Mysterieuse_10.jpg" alt="libroVerne">
+                    <img class="img-selec" src="./static/img/Ile_Mysterieuse_10.jpg" alt="libroVerne">
                 </a>
-
                 <div class="zocalo">
                     <div class="titulo-calado">
                         <h1 class="titulo-libro">Estudio en escarlata</h1>
@@ -89,10 +76,7 @@
                         <i class="fa-solid fa-square-pen"></i>
                         <h3 class="autor-libro">Julio Verne</h3>
                     </div>
-
                 </div>
-
-
             </div>
         </div>
         <!-- LIBROS POPULARES   -->
@@ -102,7 +86,7 @@
             <div class="cards-horizontales">
                 <div class="cardHorizontal">
                     <a href="#">
-                        <img src="../tpFinalCodoAcOdo/static/img/tapaLugones.webp" alt="tapa" class="tapa">
+                        <img src="./static/img/tapaLugones.webp" alt="tapa" class="tapa">
                     </a>
                     <div class="columna-dos">
                         <h4 class="titulo-libro-card">Las fuerzas extrañas</h4>
@@ -118,7 +102,7 @@
                 </div>
                 <div class="cardHorizontal">
                     <a href="#">
-                        <img src="../tpFinalCodoAcOdo/static/img/tapaLugones.webp" alt="tapa" class="tapa">
+                        <img src="./static/img/tapaLugones.webp" alt="tapa" class="tapa">
                     </a>
                     <div class="columna-dos">
                         <h4 class="titulo-libro-card">Las fuerzas extrañas</h4>
@@ -134,7 +118,7 @@
                 </div>
                 <div class="cardHorizontal">
                     <a href="#">
-                        <img src="../tpFinalCodoAcOdo/static/img/tapaLugones.webp" alt="tapa" class="tapa">
+                        <img src="./static/img/tapaLugones.webp" alt="tapa" class="tapa">
                     </a>
                     <div class="columna-dos">
                         <h4 class="titulo-libro-card">Las fuerzas extrañas</h4>
@@ -150,9 +134,7 @@
                 </div>
             </div>
         </div>
-
     </main>
-
     <!-- NAV INFERIOR PARA CELUS Y TABLETS -->
     <nav>
         <div class="nav-inf">
@@ -162,14 +144,11 @@
             <a href="./templates/login.html"><i class="fa-solid fa-circle-user"></i></a>
         </div>
     </nav>
-
     <!-- FOOTER SOLO PARA PC -->
     <footer class="footer">
         <p>&copy; 2024 nombre de la empresa</p>
     </footer>
-
     <!-- SCRIPT -->
     <script src="./static/scripts/menu.js"></script>
 </body>
-
 </html>

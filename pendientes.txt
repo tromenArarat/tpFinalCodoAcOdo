@@ -1,0 +1,55 @@
+	1er requisito:	SITIO
+		-	al menos 4 páginas HOME / FORM_CONTACTO / BUSCADOR / LOGIN
+		
+	2do req.: 	FORMULARIO (tiene que ser de contacto) --> Javier
+		- 	al menos 5 campos
+				<imagen de cajita con sobre>
+				- nombre
+				- email
+				- mensaje (textbox)
+				- característica ARG/BRA/URU/BOL/CHI/PAR (select para ingresar código de área) 
+					
+				- acepto recibir actualizaciones? sí/no (checkbox)
+
+		-	incluir un checkbox o radiobutton
+		-	incluir un select
+		-	incluir una imagen,
+		-	validación realizada mediante js
+
+	3er req.:		RESPONSIVE
+		- 	al menos una página totalmente responsive con mínimo 3 ptos de corte (pc, tablet, celu)
+
+				Sería el HOME. El info del nav es el que te dirige al form de contacto
+						Favoritos desactivado
+						el tipito dirige login, del login, al register
+	
+	4to req.:		BONUS (CLASE 8)
+		-	utilizar al menos una animación, transformación o una transición
+
+	5to req.:		FLEXBOX Y/O GRID (CLASE 9)
+		-	poseer una estructura HTML maquetada con Flexbox y/o Grid
+
+	6to req.:		LEGIBILIDAD
+		-	legibilidad del proyecto //traducción de los comentarios
+		-	que no haya puntos de no retorno 
+		-	optimización de imágenes para la web 
+		-	uso de favicon --> favicon
+
+	7mo req.:		GITHUB (CLASE 11) 
+		-	subida a github del TP --> armaríamos otro repo
+
+	8to req.:		DEPLOY
+		-	subir la página a un servidor online --> https://www.youtube.com/watch?v=SnQTURNAUqY&t=9s
+				- armar repo local
+				- git remote
+				- pages de github
+
+	9no req.:		VALIDACIÓN
+		-	validación del html con validator.w3.org
+			
+
+	10mo req.:		ESTILOS EXTERNOS
+		-	utilizar i-frames y/o íconos de FontAwesome y/o fuentes locales o bien de Google Fonts
+		-	bootstrap optativo
+
+EXTRA -- automatizar la actualización de tarjetas con la vinculación a una api.
