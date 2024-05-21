@@ -2,6 +2,8 @@
 
 <em> Deploy en: https://tromenararat.github.io/tpFinalCodoAcOdo/ </em>
 
+<em> Figma utilizado para el proyecto: https://www.figma.com/design/0r5mqW6JqAWd8dyD2n23dy/App-Libreria-CodoAcodo?node-id=0-1 </em>
+
 ![image](https://github.com/tromenArarat/tpFinalCodoAcOdo/assets/3432106/5ce4c627-4d4d-42e4-bf93-c3ec4587c55f)
 
 
