@@ -45,6 +45,21 @@ nav ul li a:hover {
     margin-right: 10px; /* Añadimos espacio entre los iconos y el texto */
 }
 
+/* MENU DESPLEGABLE */
+
+.menu-desplegable {
+    display: none;
+    background-color: var(--color-fondo);
+}
+.nav ul li ul.menu-desplegable {
+    display: none;
+    position: absolute;
+    width: 10rem;
+    z-index: 5;
+    right: 0;
+    background-color: var(--color-fondo);
+    box-shadow: 8px 4px 5px 0 rgba(2, 2, 2, 2);
+}
 .menu-desplegable li a {
     background-color: var(--color-fondo);
     font-family: var(--font-Kontumruy);
@@ -57,12 +72,10 @@ nav ul li a:hover {
     height: 2rem;
 }
 
+
 .menu-desplegable li:hover a {
-    background-color: var(--color-botones-detalles);
+    background-color: var(--primary-color);
 }
-
-
-
 /* Estilos del MAIN */
 
 /* IMAGEN LIBRO SELECCIONADO */
@@ -76,7 +89,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* adjust as needed */
+    margin-top: 20px;
 }
 .img-container {
     position: relative;
