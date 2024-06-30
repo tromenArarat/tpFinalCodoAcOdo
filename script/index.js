@@ -109,9 +109,26 @@ function generaSeries() {
 */
 const baseURL = 'https://tpback-kl98.onrender.com';
 
+
+/*
+fetch('https://tu-backend.com/api/endpoint', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  credentials: 'include'  // Asegúrate de configurar esto si estás haciendo solicitudes con credenciales
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+*/
+
 const getDatos = (endpoint)=> {
     return fetch(`${baseURL}${endpoint}`, {
         method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+          },
         credentials: 'include'
     }
     )
