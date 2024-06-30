@@ -106,9 +106,8 @@ function generaSeries() {
                     </div>
                 </div>
             </div>
+        
 */
-const baseURL = 'https://tpback-kl98.onrender.com';
-
 
 /*
 fetch('https://tu-backend.com/api/endpoint', {
@@ -122,6 +121,7 @@ fetch('https://tu-backend.com/api/endpoint', {
 .then(data => console.log(data))
 .catch(error => console.error('Error:', error));
 */
+const baseURL = 'https://tpback-kl98.onrender.com';
 
 const getDatos = (endpoint)=> {
     return fetch(`${baseURL}${endpoint}`, {
@@ -129,7 +129,8 @@ const getDatos = (endpoint)=> {
         headers: {
             'Content-Type': 'application/json'
           },
-        credentials: 'include'
+        credentials: 'include',
+        mode: 'no-cors'
     }
     )
         .then(response => response.json())

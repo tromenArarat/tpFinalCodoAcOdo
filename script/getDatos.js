@@ -1,4 +1,5 @@
 // URL base da API
+/*
 const baseURL = 'https://tpback-kl98.onrender.com';
 
 export default function getDatos(endpoint) {
@@ -8,3 +9,4 @@ export default function getDatos(endpoint) {
             console.error('Error al ingresar al endpoint', error);
         });
 }
+*/
