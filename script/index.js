@@ -142,6 +142,7 @@ const getDatos = (endpoint)=> {
 const libroSeleccionado = document.querySelector(".seleccionado");
 
 getDatos("/books").then((data)=>{
+    console.log("algop"+data)
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
@@ -163,6 +164,7 @@ getDatos("/books").then((data)=>{
                 </div>
             </div>
     `
+    
 })
 .catch((err)=>{
     console.log(err);
