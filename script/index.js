@@ -123,16 +123,17 @@ fetch('https://tu-backend.com/api/endpoint', {
 */
 const baseURL = 'https://tpback-kl98.onrender.com';
 
-const getDatos = (endpoint)=> {
+const getDatos = async (endpoint)=> {
+    /*
     fetch(`${baseURL}${endpoint}`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         return data;
     }).catch((err) => {
         console.log(err);
     })
-    /*
+    */
+    
     try {
         const response = await fetch(`${baseURL}${endpoint}`, {
             method: 'GET',
@@ -159,7 +160,6 @@ const getDatos = (endpoint)=> {
         console.error('Error al ingresar al endpoint', error);
         throw error; // rethrow the error so it can be handled in the calling function
     }
-    */
 }
 
 const libroSeleccionado = document.querySelector(".seleccionado");
