@@ -124,16 +124,6 @@ fetch('https://tu-backend.com/api/endpoint', {
 const baseURL = 'https://tpback-kl98.onrender.com';
 
 const getDatos = async (endpoint)=> {
-    /*
-    fetch(`${baseURL}${endpoint}`)
-    .then(response => response.json())
-    .then(data => {
-        return data;
-    }).catch((err) => {
-        console.log(err);
-    })
-    */
-    
     try {
         const response = await fetch(`${baseURL}${endpoint}`, {
             method: 'GET',
@@ -165,11 +155,7 @@ const getDatos = async (endpoint)=> {
 const libroSeleccionado = document.querySelector(".seleccionado");
 
 getDatos("/books").then((data)=>{
-    if (!data || !data.length) {
-        throw new Error('No data or empty data array');
-    }
-
-    console.log("Received data:", data);
+    console.log("algop"+data)
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
