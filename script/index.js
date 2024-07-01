@@ -155,7 +155,7 @@ const getDatos = async (endpoint)=> {
 const libroSeleccionado = document.querySelector(".seleccionado");
 
 getDatos("/books").then((data)=>{
-    console.log("algop"+data)
+    console.log(data)
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
@@ -164,7 +164,7 @@ getDatos("/books").then((data)=>{
                 </a>
                 <div class="zocalo">
                     <div class="titulo-calado">
-                        <h1 class="titulo-libro">${data[0].titulo}</h1>
+                        <h1 class="titulo-libro">${data[0].title}</h1>
                     </div>
                     <div class="descargas">
                         <i class="fa-regular fa-circle-play"></i>
