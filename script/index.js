@@ -123,7 +123,7 @@ fetch('https://tu-backend.com/api/endpoint', {
 */
 const baseURL = 'https://tpback-kl98.onrender.com';
 
-const getDatos = (endpoint)=> {
+const getDatos = async (endpoint)=> {
     return fetch(`${baseURL}${endpoint}`, {
         method: 'GET',
         headers: {
