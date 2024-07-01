@@ -153,7 +153,7 @@ const getDatos = async (endpoint)=> {
 }
 
 const libroSeleccionado = document.querySelector(".seleccionado");
-const cards = document.querySelector(".cards-horizontales")
+const cards = document.querySelector(".populares")
 
 getDatos("/books").then((data)=>{
     console.log(data)
@@ -180,8 +180,8 @@ getDatos("/books").then((data)=>{
     `;
     data.forEach(libro => {
       const cardLibro = document.createElement('div');
-      cardLibro.innerHTML=
-      `
+      cards.innerHTML=
+      `<div class="cardHorizontal">
         <a href="#">
             <img src=${libro.tapa} alt="tapa" class="tapa">
                 </a>
@@ -195,6 +195,7 @@ getDatos("/books").then((data)=>{
                             <i class="fa-regular fa-star"></i>
                             <em> 20k descargas</em>
                         </div>
+                    </div>
                     </div>
       `
     });
