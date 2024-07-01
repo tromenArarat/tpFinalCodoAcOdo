@@ -129,8 +129,7 @@ const getDatos = (endpoint)=> {
         headers: {
             'Content-Type': 'application/json'
           },
-        credentials: 'include',
-        mode: 'no-cors'
+        credentials: 'include'
     }
     )
         .then(response => response.json())
