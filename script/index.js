@@ -124,24 +124,42 @@ fetch('https://tu-backend.com/api/endpoint', {
 const baseURL = 'https://tpback-kl98.onrender.com';
 
 const getDatos = async (endpoint)=> {
-    return fetch(`${baseURL}${endpoint}`, {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-          },
-        credentials: 'include'
-    }
-    )
-        .then(response => response.json())
-        .catch(error => {
-            console.error('Error al ingresar al endpoint', error);
+    try {
+        const response = await fetch(`${baseURL}${endpoint}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'
         });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const text = await response.text();
+
+        try {
+            const data = JSON.parse(text);
+            return data;
+        } catch (error) {
+            throw new Error('Error parsing JSON: ' + error.message);
+        }
+
+    } catch (error) {
+        console.error('Error al ingresar al endpoint', error);
+        throw error; // rethrow the error so it can be handled in the calling function
+    }
 }
 
 const libroSeleccionado = document.querySelector(".seleccionado");
 
 getDatos("/books").then((data)=>{
-    console.log("algop"+data)
+    if (!data || !data.length) {
+        throw new Error('No data or empty data array');
+    }
+
+    console.log("Received data:", data);
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
