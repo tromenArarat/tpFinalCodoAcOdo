@@ -153,7 +153,7 @@ const getDatos = async (endpoint)=> {
 }
 
 const libroSeleccionado = document.querySelector(".seleccionado");
-const cards = document.querySelector(".populares")
+const cards = document.querySelector(".populares");
 
 getDatos("/books").then((data)=>{
     console.log(data)
@@ -178,16 +178,15 @@ getDatos("/books").then((data)=>{
                 </div>
             </div>
     `;
-    data.forEach(libro => {
-      const cardLibro = document.createElement('div');
-      cards.innerHTML=
-      `<div class="cardHorizontal">
+    for(let i=1;i<data.length;i++){
+        cards.innerHTML=
+        `<div class="cardHorizontal">
         <a href="#">
-            <img src=${libro.tapa} alt="tapa" class="tapa">
+            <img src=${data[i].tapa} alt="tapa" class="tapa">
                 </a>
                 <div class="columna-dos">
-                    <h4 class="titulo-libro-card">${libro.title}</h4>
-                        <h5 class="autor-libro-card">Por ${libro.autor}</h5>
+                    <h4 class="titulo-libro-card">${data[i].title}</h4>
+                        <h5 class="autor-libro-card">Por ${data[i].autor}</h5>
                         <div class="calificacion">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -195,10 +194,11 @@ getDatos("/books").then((data)=>{
                             <i class="fa-regular fa-star"></i>
                             <em> 20k descargas</em>
                         </div>
-                    </div>
-                    </div>
+                </div>
+        </div>
       `
-    });
+    }
+    
     
 })
 .catch((err)=>{
