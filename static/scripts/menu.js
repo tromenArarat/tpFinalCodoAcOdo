@@ -9,7 +9,6 @@ function ocultarMenu() {
     menuUsuario.style.display = "none";
 }
 
-
 // Despliega el menu de usuario
 function desplegarMenuMovil() {
     const menuUsuario = document.getElementById("menu-usuario-movil");
