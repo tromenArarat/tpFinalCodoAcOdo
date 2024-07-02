@@ -207,24 +207,3 @@ getDatos("/books").then((data)=>{
 .catch((err)=>{
     console.log(err);
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    // Ocultar la pantalla de carga una vez que el contenido esté completamente cargado
-    document.getElementById("pantalla-carga").style.display = "none";
-});
-
-function mostrarPantallaCarga() {
-    document.getElementById("pantalla-carga").style.display = "flex";
-}
-
-function ocultarPantallaCarga() {
-    document.getElementById("pantalla-carga").style.display = "none";
-}
-
-// Ejemplo de cómo mostrar la pantalla de carga antes de realizar una acción
-// y ocultarla después de que la acción se complete
-mostrarPantallaCarga();
-// Simula una acción asincrónica con setTimeout
-setTimeout(function() {
-    ocultarPantallaCarga();
-}, 3000); // 3 segundos de simulación de carga
