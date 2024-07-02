@@ -153,7 +153,7 @@ const getDatos = async (endpoint)=> {
 }
 
 const libroSeleccionado = document.querySelector(".seleccionado");
-const cards = document.querySelector(".populares");
+
 
 getDatos("/books").then((data)=>{
     console.log(data)
@@ -178,15 +178,18 @@ getDatos("/books").then((data)=>{
                 </div>
             </div>
     `;
+    const libros = data;
+    const librosContenedor = document.querySelector(".populares");
     for(let i=1;i<data.length;i++){
-        cards.innerHTML=
+        const librosElement = document.createElement("div");
+        librosElement.innerHTML=
         `<div class="cardHorizontal">
         <a href="#">
-            <img src=${data[i].tapa} alt="tapa" class="tapa">
+            <img src=${libros[i].tapa} alt="tapa" class="tapa">
                 </a>
                 <div class="columna-dos">
-                    <h4 class="titulo-libro-card">${data[i].title}</h4>
-                        <h5 class="autor-libro-card">Por ${data[i].autor}</h5>
+                    <h4 class="titulo-libro-card">${libros[i].title}</h4>
+                        <h5 class="autor-libro-card">Por ${libros[i].autor}</h5>
                         <div class="calificacion">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -197,8 +200,8 @@ getDatos("/books").then((data)=>{
                 </div>
         </div>
       `
+      librosContenedor.appendChild(librosElement);
     }
-    
     
 })
 .catch((err)=>{
