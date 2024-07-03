@@ -81,7 +81,7 @@ getDatos("/books").then((data)=>{
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <em> ${libro.tematica_name}</em>
+                            <em> ${libros.tematica_name}</em>
                         </div>
                 </div>
         </div>
