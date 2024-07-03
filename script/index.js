@@ -55,7 +55,7 @@ getDatos("/books").then((data)=>{
                     </div>
                     <div class="descargas">
                         <i class="fa-regular fa-circle-play"></i>
-                        <h3 class="descargasNum">112 descargas</h3>
+                        <h3 class="descargasNum">${libro.tematica.name}</h3>
                     </div>
                     <div class="autor">
                         <i class="fa-solid fa-square-pen"></i>
