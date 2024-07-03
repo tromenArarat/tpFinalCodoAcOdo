@@ -65,7 +65,7 @@ getDatos("/books").then((data)=>{
     `;
     const libros = removeItem(data, libro);
     const librosContenedor = document.querySelector(".populares");
-    for(let i=1;i<data.length;i++){
+    for(let i=0;i<data.length;i++){
         const librosElement = document.createElement("div");
         librosElement.innerHTML=
         `<div class="cardHorizontal">
