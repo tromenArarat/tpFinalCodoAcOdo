@@ -55,7 +55,7 @@ getDatos("/books").then((data)=>{
                     </div>
                     <div class="descargas">
                         <i class="fa-regular fa-circle-play"></i>
-                        <h3 class="descargasNum">${libro.tematica.name}</h3>
+                        <h3 class="descargasNum">${libro.tematica_id.name}</h3>
                     </div>
                     <div class="autor">
                         <i class="fa-solid fa-square-pen"></i>
@@ -81,7 +81,7 @@ getDatos("/books").then((data)=>{
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-regular fa-star"></i>
-                            <em> 20k descargas</em>
+                            <em> ${libro.tematica_id.name}</em>
                         </div>
                 </div>
         </div>
