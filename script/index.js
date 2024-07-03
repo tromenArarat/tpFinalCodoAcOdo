@@ -31,18 +31,26 @@ const getDatos = async (endpoint)=> {
 
 const libroSeleccionado = document.querySelector(".seleccionado");
 
+function getRandomItem(array) {
+    const randomIndex = Math.floor(Math.random() * array.length);
+    return array[randomIndex];
+  }
+
+function removeItem(array, item) {
+    return array.filter(i => i !== item);
+  }
 
 getDatos("/books").then((data)=>{
-    console.log(data)
+    const libro = getRandomItem(data);
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
                 <a href="#">
-                    <img class="img-selec" src=${data[0].tapa} alt="libroSeleccionado">
+                    <img class="img-selec" src=${libro.tapa} alt="libroSeleccionado">
                 </a>
                 <div class="zocalo">
                     <div class="titulo-calado">
-                        <h1 class="titulo-libro">${data[0].title}</h1>
+                        <h1 class="titulo-libro">${libro.title}</h1>
                     </div>
                     <div class="descargas">
                         <i class="fa-regular fa-circle-play"></i>
@@ -50,12 +58,12 @@ getDatos("/books").then((data)=>{
                     </div>
                     <div class="autor">
                         <i class="fa-solid fa-square-pen"></i>
-                        <h3 class="autor-libro">${data[0].autor}</h3>
+                        <h3 class="autor-libro">${libro.autor}</h3>
                     </div>
                 </div>
             </div>
     `;
-    const libros = data;
+    const libros = removeItem(data, libro);
     const librosContenedor = document.querySelector(".populares");
     for(let i=1;i<data.length;i++){
         const librosElement = document.createElement("div");
