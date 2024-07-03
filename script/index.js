@@ -31,11 +31,12 @@ const getDatos = async (endpoint)=> {
 
 const libroSeleccionado = document.querySelector(".seleccionado");
 
+// Función para seleccionar un libro random
 function getRandomItem(array) {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
   }
-
+// Función para remover el libro seleccionado del array de libros
 function removeItem(array, item) {
     return array.filter(i => i !== item);
   }
@@ -65,7 +66,7 @@ getDatos("/books").then((data)=>{
     `;
     const libros = removeItem(data, libro);
     const librosContenedor = document.querySelector(".populares");
-    for(let i=0;i<data.length;i++){
+    for(let i=0;i<libros.length;i++){
         const librosElement = document.createElement("div");
         librosElement.innerHTML=
         `<div class="cardHorizontal">
