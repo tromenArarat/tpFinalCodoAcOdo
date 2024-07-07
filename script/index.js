@@ -1,4 +1,5 @@
-const baseURL = 'https://libreria-backend-0nfu.onrender.com';
+// const baseURL = 'https://libreria-backend-0nfu.onrender.com';
+const baseURL = 'http://localhost:3000';
 
 const getDatos = async (endpoint)=> {
     try {
@@ -7,7 +8,7 @@ const getDatos = async (endpoint)=> {
             headers: {
                 'Content-Type': 'application/json'
             },
-            credentials: 'include'
+            // credentials: 'include'
         });
 
         if (!response.ok) {
