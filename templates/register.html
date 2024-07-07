@@ -43,26 +43,23 @@
             </li>
         </ul>
     </nav>
-    <!-- CENTRO DE LA PANTALLA -->
     <main>
         <div class="contenedor-forms">
-            <form class="form-login-register" id="loginForm" action="/auth/login">
-                <label for="mail">Email </label>
-                <input type="email" id="mail" placeholder="Ingrese su correo electrónico" required>
+            <form class="form-login-register" id="registerForm" action="/auth/register">
+                <label for="nombre">Nombre </label>
+                <input type="name" id="nombre" placeholder="Ingrese un nombre de usuarix" required>
                 <label for="clave">Contraseña </label>
-                <input type="password" id="clave" placeholder="Ingrese su contraseña" required>
-                <a href="#">¿Has olvidado tu contraseña?</a>
-                <!-- TAREA PENDIENTE - : Recuperación por mail. 
-                    FEATURE 001 - :  Si olvidó su contraseña se lo redirige al registro con un sweetAlert que dice:
-                "No importa. Ingresá el mail con el que te registraste para recuperar tus datos
-                o creá un nuevo usuarix." -->
+                <input type="password" id="clave" placeholder="Ingrese una contraseña sólo para este sitio" required>
+                <label for="mail">Correo electrónico </label>
+                <input type="email" id="mail" placeholder="Ingrese su e-mail" required>
+                <br>
                 <div class="container">
-                    <button type="submit" class="btn">INICIAR SESIÓN</button>
+                    <button type="submit" class="btn">REGISTRARSE</button>
                 </div>
             </form>
-            <p>¿Aún no estás registradx? Registrate <a href="./register.html">aquí</a></p>
         </div>
     </main>
-    <script src="../script/login.js"></script>
+    <script src="../script/register.js"></script>
 </body>
+
 </html>
