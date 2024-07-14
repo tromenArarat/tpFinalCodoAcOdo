@@ -10,20 +10,16 @@ const getDatos = async (endpoint)=> {
             },
             // credentials: 'include'
         });
-
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-
         const text = await response.text();
-
         try {
             const data = JSON.parse(text);
             return data;
         } catch (error) {
             throw new Error('Error parsing JSON: ' + error.message);
         }
-
     } catch (error) {
         console.error('Error al ingresar al endpoint', error);
         throw error; // rethrow the error so it can be handled in the calling function
@@ -89,10 +85,8 @@ getDatos("/books").then((data)=>{
       `
       librosContenedor.appendChild(librosElement);
     }
-    
 })
 .catch((err)=>{
     console.log(err);
 });
-
 
