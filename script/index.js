@@ -43,7 +43,7 @@ getDatos("/books").then((data)=>{
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
-                <a href="#">
+                <a href="../templates/info.html">
                     <img class="img-selec" src=${libro.tapa} alt="libroSeleccionado">
                 </a>
                 <div class="zocalo">
