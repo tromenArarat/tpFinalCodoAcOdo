@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Vinculación con estilos y favicon -->
+    <link rel="stylesheet" href="../static/estilos/index.css">
+    <link rel="stylesheet" href="../static/estilos/info.css">
+    
+    <link rel="shortcut icon" href="../tpFinalCodoAcOdo/static/img/icons8-book-96.png" type="image/x-icon">
+    <title>LibreriaDeLibros</title>
+    <!-- Fontawesome Icons -->
+    <script src="https://kit.fontawesome.com/fa04600604.js" crossorigin="anonymous"></script>
+    <!-- Fuentes (tipografías) de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Lato:ital@1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- NAV SUPERIOR-->
+    <!-- Tiene 2 partes -->
+    <nav class="nav">
+        <ul>
+            <!-- Esquina izquierda -->
+            <li>
+                <div class="centro">
+                    <i class="fa-solid fa-book"></i>
+                    <h2>Librería de libros</h2>
+                </div>
+            </li>
+            <!-- Esquina derecha -->
+            <!-- Se divide en dos -->
+            <li>
+                <ul>
+                    <!-- Regreso -->
+                    <li>
+                        <a href="javascript:void(0)" onclick="history.back()">
+                            <i class="fa-solid fa-arrow-rotate-left"></i>
+                        </a>
+                    </li>
+                    <!-- Búsqueda -->
+                    <li>
+                        <a href="../templates/explore.html">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    <!-- Contacto y login -->
+                    <li class="contacto">
+                        <a class="fa-solid fa-bars" onclick="desplegarMenu()"></a>
+                        <ul class="menu-desplegable" id="menu-usuario" onmouseleave="ocultarMenu()">
+                            <li> <a href="../templates/login.html">Iniciar sesion</a> </li>
+                            <li> <a href="../templates/contactenos.html">Contáctenos</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <form id="bookForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+        
+            <label for="autor">Author:</label>
+            <input type="text" id="autor" name="autor" required>
+        
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year">
+        
+            <label for="tapa">Cover URL:</label>
+            <input type="url" id="tapa" name="tapa">
+        
+            <label for="tematica_id">Theme:</label>
+            <select id="tematica_id" name="tematica_id" required></select>
+        
+            <label for="paginas">Pages:</label>
+            <input type="number" id="paginas" name="paginas">
+        
+            <label for="resenia">Review:</label>
+            <textarea id="resenia" name="resenia"></textarea>
+        
+            <label for="devoluciones">Returns:</label>
+            <input type="number" id="devoluciones" name="devoluciones">
+        
+            <button type="button" id="toggleDetalle">Toggle Detail Fields</button>
+        
+            <div id="detalleSection" style="display: none;">
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn">
+        
+                <label for="editorial">Editorial:</label>
+                <input type="text" id="editorial" name="editorial">
+                
+                <label for="idioma">Language:</label>
+                <input type="text" id="idioma" name="idioma">
+
+                <label for="traductor">Translator:</label>
+                <input type="text" id="traductor" name="traductor">
+
+                <label for="formato">Format:</label>
+                <input type="text" id="formato" name="formato">
+
+                <label for="lanzamiento">Release Date:</label>
+                <input type="date" id="lanzamiento" name="lanzamiento">
+
+                <label for="adicional">Additional Info:</label>
+                <textarea id="adicional" name="adicional"></textarea>
+
+                <label for="pdf">PDF URL:</label>
+                <input type="url" id="pdf" name="pdf">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <nav>
+        <div class="nav-inf">
+            <a href="../index.html"><i class="fa-solid fa-house"></i></a>
+            <a href="../templates/contactenos.html"><i class="fa-solid fa-circle-question"></i></a>
+            <a href=""><i class="fa-regular fa-bookmark"></i></a>
+            <a href="../templates/login.html"><i class="fa-solid fa-circle-user"></i></a>
+        </div>
+    </nav>
+    <!-- FOOTER SOLO PARA PC -->
+    <footer class="footer">
+        <p>&copy; 2024 nombre de la empresa</p>
+    </footer>
+
+    <!-- <script src="../script/info.js"></script> -->
+    <script src="../script/bookload.js"></script>
+</body>
+
+</html>
