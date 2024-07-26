@@ -43,7 +43,7 @@ getDatos("/books").then((data)=>{
     libroSeleccionado.innerHTML=
     `
     <div class="img-container">
-                <a href="../templates/info.html">
+                <a href="../templates/info.html?id=${libro.id}">
                     <img class="img-selec" src=${libro.tapa} alt="libroSeleccionado">
                 </a>
                 <div class="zocalo">
@@ -67,9 +67,9 @@ getDatos("/books").then((data)=>{
         const librosElement = document.createElement("div");
         librosElement.innerHTML=
         `<div class="cardHorizontal">
-        <a href="#">
+        <a href="../templates/info.html?id=${libros[i].id}">
             <img src=${libros[i].tapa} alt="tapa" class="tapa">
-                </a>
+        </a>
                 <div class="columna-dos">
                     <h4 class="titulo-libro-card">${libros[i].title}</h4>
                         <h5 class="autor-libro-card">Por ${libros[i].autor}</h5>
